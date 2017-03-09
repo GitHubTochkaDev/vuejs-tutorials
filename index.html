@@ -8,13 +8,13 @@
 <body>
 
     <div id="app">
-        
-        <dialog btn-text="Согласен">Вопрос 1</dialog>
-        <dialog btn-text="Хорошо">Вопрос 2</dialog>
+
+        <modal btn-text="Согласен">Вопрос 1</modal>
+        <modal btn-text="Хорошо">Вопрос 2</modal>
 
     </div>
 
-    <template id="dialog-template">
+    <template id="template-modal">
         <div class="Dialog" v-show="active">
             <div class="Dialog__overlay" @click="close()"></div>
             <div class="Dialog__content">
@@ -33,8 +33,8 @@
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script>
-        Vue.component('dialog', {
-            template: '#dialog-template',
+        Vue.component('modal', {
+            template: '#template-modal',
             data: function() {
                 return {
                     active: false
